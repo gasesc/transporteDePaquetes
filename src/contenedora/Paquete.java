@@ -3,17 +3,34 @@ package contenedora;
 public class Paquete {
 	
 	private Double alto;
-	private Integer ancho;
+	private Double ancho;
 	private Double profundo;
 	private String ciudad;
+	private Double peso;
 	
 	
-	public Paquete(Double alto, Integer ancho, Double profundo,String ciudad) {
+	public Paquete(Double alto, Double ancho, Double profundo,String ciudad , double peso) {
 		
 		this.alto = alto;
 		this.ancho = ancho;
 		this.profundo = profundo;
 		this.ciudad=ciudad;
+		this.peso=peso;
+	}
+	
+	
+	public Double getPeso() {
+		return peso;
+	}
+
+
+	public void setPeso(Double peso) {
+		this.peso = peso;
+	}
+
+
+	public double calcularVolumen() {
+		return alto*ancho*profundo;
 	}
 
 
@@ -27,12 +44,12 @@ public class Paquete {
 	}
 
 
-	public Integer getAncho() {
+	public Double getAncho() {
 		return ancho;
 	}
 
 
-	public void setAncho(Integer ancho) {
+	public void setAncho(Double ancho) {
 		this.ancho = ancho;
 	}
 
